@@ -18,7 +18,7 @@
     </div>
 
     <div class="form-group">
-      <label for="{{ form.id_for_label }}">{{ form.nome.label }}</label>
+      <label for="{{ form.id_for_label }}">{{ form.nome.label }}:</label>
       {% render_field form.nome class="form-control" placeholder=form.nome.label %}
       <div class="{% if form.nome.errors %} invalid{% endif %}">
         {% for error in form.nome.errors %}
@@ -26,7 +26,7 @@
         {% endfor %}
       </div>
 
-      <label for="{{ form.id_for_label }}">{{ form.descricao.label }}</label>
+      <label for="{{ form.id_for_label }}">{{ form.descricao.label }}:</label>
       {% render_field form.descricao class="form-control" placeholder=form.descricao.label %}
       <div class="{% if form.descricao.errors %} invalid{% endif %}">
         {% for error in form.descricao.errors %}
@@ -34,7 +34,7 @@
         {% endfor %}
       </div>
 
-      <label for="{{ form.id_for_label }}">{{ form.valor.label }}</label>
+      <label for="{{ form.id_for_label }}">{{ form.valor.label }}:</label>
       {% render_field form.valor class="form-control" placeholder=form.valor.label %}
       <div class="{% if form.valor.errors %} invalid{% endif %}">
         {% for error in form.valor.errors %}
