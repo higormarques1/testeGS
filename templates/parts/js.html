@@ -1,0 +1,37 @@
+{% load static %}
+<!-- jQuery -->
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'plugins/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dist/js/adminlte.js' %}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{% static 'dist/js/demo.js' %}"></script>
+
+<script src="{% static 'dist/js/locastyle.js' %}"></script>
+<!-- Bootstrap Modal -->
+<script src="{% static 'dist/js/jquery.bootstrap.modal.forms.js' %}"></script>
+<script src="{% static 'dist/js/jquery.bootstrap.modal.forms.min.js' %}"></script>
+<script>
+    $(function () {
+        $(".cadastrar-produto").modalForm({formURL: "{% url 'cadastrar_produto' %}"});
+
+        $(".atualizar-produto").each(function () {
+            $(this).modalForm({formURL: $(this).data('id')});
+        });
+        $(".deletar-produto").each(function () {
+            $(this).modalForm({formURL: $(this).data('id')});
+        });
+
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script src="{% static 'dist/js/script.js' %}"></script>

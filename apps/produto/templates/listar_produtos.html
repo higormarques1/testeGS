@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Lista de Produtos{% endblock %}
+
+{% block content %}
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
+</div>
+{% if messages %}
+    {% for message in messages %}
+        {% if message.tags == 'success'%}
+            <script>
+                $(function(){toast_success('{{message|safe}}');});
+            </script>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Produtos</h1>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<section class="content">
+  <div class="container-fluid">
+    <div class="card card-default">
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                <button class="cadastrar-produto btn btn-outline-primary">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    Adicionar
+                </button>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content">
+  <div class="container-fluid">
+      <!-- /.card-header -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th style="width: 8%; text-align: center;">Ação</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for produto in produtos %}
+                                <tr>
+                                    <td>{{ produto.nome }}</td>
+                                    <td>{{ produto.descricao }}</td>
+                                    <td>{{ produto.valor }}</td>
+                                    <td style="width: 10%; text-align: center">
+                                        <button class="atualizar-produto btn btn-cust-danger btn-xs"
+                                                data-id="{% url 'atualizar_produto' produto.pk %}">
+                                            <i class="fa fa-edit" title="Editar"></i>
+                                        </button>
+                                        <button class="deletar-produto btn btn-cust-danger btn-xs"
+                                                data-id="{% url 'deletar_produto' produto.pk %}">
+                                            <i class="fa fa-trash" title="Deletar"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+{% include "parts/pagination.html" %}
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>GS</title>
+    
+    <!-- Bootstrap -->
+    <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dist/css/estilo.css' %}" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="login-page">
+        <div class="form">
+          <span class="img-logo">
+            <img class="manImg" src="{% static 'img/logo1.png' %}"/>
+          </span>
+          <form method="POST" class="login-form">
+            {% csrf_token %}
+            <input type="text"  name="username" placeholder="Usuário"/>
+            <input type="password" name="password" placeholder="Senha"/>
+
+            <button class="btn btn-primary" type="submit">Entrar</button>
+
+          </form><br>
+          {% if messages %}
+              {% for message in messages %}
+                <h5>{{ message }}</h5>
+              {% endfor %}
+          {% endif %}
+        </div>
+    </div> 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+/* Remover setas do input type="number" */
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+input[type=number] {
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.sidebar{
+    background: #161e2c;
+}
+
+.main-header{
+    background: #161e2c;
+}
+
+.brand-link{
+    background: rgb(157, 175, 15);
+}
+
+/* Loading */
+.load {
+   width: 100px;
+   height: 100px;
+   position: fixed;
+   top: 40%;
+   left: 45%;
+   z-index: 4;
+
+}
+
+/*
+span.select2.select2-container.select2-container--default{
+    width: 100%;
+}
+*/
+
+.icons {
+    color: #000;
+}
+
+.dashlink{
+    text-decoration: none;
+    color: inherit;
+}
+
+.accordion-toggle{
+    color: #c2c7d0;
+}
+.accordion-toggle:hover{
+    color: #fff;
+}
+
+.card-header{
+    background-color: #343a40;
+}
+
+.card-title{
+    color: #c2c7d0;
+}

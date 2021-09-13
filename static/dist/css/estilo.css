@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.img-logo{
+  padding-right:3px; 
+  padding-top: 3px; 
+  display:inline-block;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.manImg{
+  max-width: 50%;
+  height: auto;
+  padding-bottom: 30px;
+  
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(157, 175, 15);;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover {
+    color: #fff;
+    background-color: #161e2c;
+    border-color: #004360;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+
+body {
+  background: #161e2c; /* fallback for old browsers #9be1f5, #006dcc*/
+  font-family: "Roboto", sans-serif;     
+}
+
+
+/*incuido 16/06/2019*/
+.box-style {
+    position: relative!important;
+    border-radius: 3px!important;
+    background: #ffffff!important;
+    /* border-top: 3px solid #d2d6de; */
+    margin-bottom: -6px!important;
+    width: 100%!important;
+    /*box-shadow: 0 1px 1px rgba(0,0,0,0.1)!important;*/
+}
+.margin-bottom-style{
+  margin-top: 0%;
+  margin-bottom: -1%;
+}
+
+.btn-cust-box-toll,
+.btn-cust-primary,
+.btn-cust-success,
+.btn-cust-info,
+.btn-cust-danger,
+.btn-cust-warning {
+  background-color: transparent;
+  color: #778288;
+  font-size: 15px;
+}
+
+.btn-cust-primary:hover {
+  background-color: transparent;
+  color: #367fa9;
+}
+
+.btn-cust-success:hover {
+  background-color: transparent;
+  color: #008d4c;
+}
+
+.btn-cust-info:hover {
+  background-color: transparent;
+  color: #00ca6d;
+}
+
+.btn-cust-danger:hover {
+  background-color: transparent;
+  color: #d73925;
+}
+
+.btn-cust-warning:hover {
+  background-color: transparent;
+  color: #e08e0b;
+}
+.not-allowed {
+  cursor: not-allowed;
+}
+.hr{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* inicio formatação scrollbar lote*/
+
+.table-max-height-lote::-webkit-scrollbar-track
+{
+	visibility: hidden;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.table-max-height-lote::-webkit-scrollbar
+{
+	visibility: hidden;
+	width: 3px;
+	background-color: #F5F5F5;
+}
+
+.table-max-height-lote::-webkit-scrollbar-thumb
+{
+	visibility: hidden;
+	background-color: #3c8dbc;
+}
+.table-max-height-lote:hover::-webkit-scrollbar-track,
+.table-max-height-lote:focus::-webkit-scrollbar-track,
+.table-max-height-lote:hover::-webkit-scrollbar,
+.table-max-height-lote:focus::-webkit-scrollbar,
+.table-max-height-lote:hover::-webkit-scrollbar-thumb,
+.table-max-height-lote:focus::-webkit-scrollbar-thumb{
+	visibility: visible;
+}
+
+/* fim formatação scrollbar lote*/
+
+/* inicio formatação scrollbar layuot*/
+body::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+	background-color: #ECF0F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color:  #004360;
+}
+
+.scrollbar-modal::-webkit-scrollbar{
+	width: 10px;
+}
+
+.scrollbar-modal::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.scrollbar-modal::-webkit-scrollbar-thumb{
+	background-color:  #3c8dbc;
+}
+
+/* fim formatação scrollbar layout*/
+.logo-mini-style{
+    margin-left: -12px!important;
+    margin-right: -12px!important;
+}
