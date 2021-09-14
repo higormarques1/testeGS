@@ -14,6 +14,6 @@ git clone https://github.com/higormarques1/testeGS.git
 
 docker-compose up -d
 
-docker-compose run web python manage.py createsuperuser
+docker-compose exec web python manage.py createsuperuser
 
 acesse do endereço 127.0.0.1:8000
