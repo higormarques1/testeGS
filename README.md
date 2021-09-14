@@ -2,6 +2,8 @@
 <h4><i>
 Realizado o desenvolvimento de uma aplicação web utilizando Python + Django (templates), a aplicação
 tem o intuito de realizar o cadastro, listagem, atualização e exclusão de produtos.
+
+Docker usado no SO windows
 </i></h4>
 
 <h3>Baixar o projeto:</h3>
