@@ -1,9 +1,10 @@
-version: "3.6"
+version: "3"
 
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    container_name: web-app
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/testeGS
     ports:
@@ -12,6 +13,7 @@ services:
       - db
   db:
     image: postgres:13
+    container_name: postgres-db
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
